@@ -1,9 +1,3 @@
-/**
-* Template Name: Personal - v2.5.1
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -169,3 +163,45 @@
   });
 
 })(jQuery);
+
+
+
+/* show cookie policy */
+'use strict';
+          
+document.addEventListener("DOMContentLoaded", function() {
+   showCookiePolicy();
+});
+
+document.querySelector('.cookie-compliance__close').addEventListener("click", function() {
+  hideCookiePolicy();
+});
+
+function showCookiePolicy() {
+   if (!getCookie()) {
+       var btn = document.querySelector('.cookie-compliance__submit');
+  
+       btn.addEventListener('click', function(e) {
+           e.preventDefault();
+           setCookie();
+           hideCookiePolicy();
+       });
+       setTimeout(() => {
+         document.documentElement.classList.add('js-show-cookie-banner');
+       }, 1000);
+   }
+}
+
+function hideCookiePolicy() {
+   document.documentElement.classList.remove('js-show-cookie-banner');
+}
+
+function getCookie() {
+   return /(^|;)\s*policy=/.test(document.cookie);
+}
+
+function setCookie() {
+   var date = new Date()
+   date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
+   document.cookie = `policy=1; expires=${date.toUTCString()}; path=/`
+}
