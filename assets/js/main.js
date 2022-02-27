@@ -205,7 +205,11 @@ function setCookie() {
    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
    document.cookie = `policy=1; expires=${date.toUTCString()}; path=/`
 }
+
+
+
 const open = document.querySelector('#open');
+const open2 = document.querySelector('#open2');
         const close = document.querySelector('#close');
         const modal = document.querySelector('.modal');
 

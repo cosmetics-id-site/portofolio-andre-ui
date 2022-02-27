@@ -1109,47 +1109,77 @@ section .container {
 }
 
 
+/*Trigger Button*/
+.login-trigger {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom right, #B05574, #F87E7B);
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: relative; 
+  top: 50%;
+}
 button{
   border: 0;
   outline: none;
   padding: 10px 20px;
-  background-color: teal;
+  background-color: blue;
   color: #fff;
   letter-spacing: 1px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
-.modal{
-  /* display: none; */
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s;
+/*Modal*/
+h4 {
+  font-weight: bold;
+  color: #fff;
 }
-.modal.show{
-  pointer-events: initial;
-  opacity: 1;
+.close {
+  color: #fff;
+  transform: scale(1.2)
 }
-.modal-content{
-  width: 500px;
-  max-width: 90%;
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 5px;
-  transform: translateY(-100px);
-  transition: transform 0.7s;
+.modal-content {
+  font-weight: bold;
+  background: linear-gradient(to bottom right,#F87E7B,#B05574);
+  left: 50%;
+  top: 250px;
+  transform: translate(-50%, -50%);
 }
-.modal.show .modal-content{
-  transform: translateY(0);
+.form-control {
+  margin: 1em 0;
 }
-.modal-content p{
-  margin: 10px 0;
-  opacity: 0.7;
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color: #eee;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.login {
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid #FAB87F;
+  color: #FAB87F;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.login:hover {
+  background: #FAB87F;
+  color: #fff;
 }
